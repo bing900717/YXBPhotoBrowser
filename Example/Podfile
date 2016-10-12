@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YXBPhotoBrowser_Example' do
+  pod 'YXBPhotoBrowser', :path => '../'
+
+  target 'YXBPhotoBrowser_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
