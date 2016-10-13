@@ -13,14 +13,21 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* YXBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* YXBAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* YXBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* YXBViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		7B757E51F01776B86B84AB56 /* Pods_YXBPhotoBrowser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24B184CF1EF329A64EBE7C6 /* Pods_YXBPhotoBrowser_Tests.framework */; };
+		BBB5B5161DAF17F200EE2C52 /* HZImagesGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB5B5131DAF17F200EE2C52 /* HZImagesGroupView.m */; };
+		BBB5B5171DAF17F200EE2C52 /* HZPhotoItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB5B5151DAF17F200EE2C52 /* HZPhotoItemModel.m */; };
+		BBB5B51E1DAF182500EE2C52 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB5B5191DAF182500EE2C52 /* CustomCell.m */; };
+		BBB5B51F1DAF182500EE2C52 /* personInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB5B51B1DAF182500EE2C52 /* personInfo.m */; };
+		BBB5B5201DAF182500EE2C52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB5B51D1DAF182500EE2C52 /* ViewController.m */; };
+		BBB5B5221DAF196600EE2C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB5B5211DAF196600EE2C52 /* Main.storyboard */; };
+		BBB5B5251DAF1A3A00EE2C52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB5B5241DAF1A3A00EE2C52 /* Launch Screen.storyboard */; };
+		E6606AF580CA96FB6F98BFEA /* Pods_YXBPhotoBrowser_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B090B8A1DC5A877F32F7FCD0 /* Pods_YXBPhotoBrowser_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11FD8810C1A298A4966952BF /* YXBPhotoBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = YXBPhotoBrowser.podspec; path = ../YXBPhotoBrowser.podspec; sourceTree = "<group>"; };
+		11FD8810C1A298A4966952BF /* YXBPhotoBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YXBPhotoBrowser.podspec; path = ../YXBPhotoBrowser.podspec; sourceTree = "<group>"; };
+		16471AF23832465399BF8182 /* Pods-YXBPhotoBrowser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBPhotoBrowser_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXBPhotoBrowser_Tests/Pods-YXBPhotoBrowser_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5A3BC78675870D2EBF443ED3 /* Pods-YXBPhotoBrowser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBPhotoBrowser_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXBPhotoBrowser_Example/Pods-YXBPhotoBrowser_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* YXBPhotoBrowser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXBPhotoBrowser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,8 +54,6 @@
 		6003F59B195388D20070C39A /* YXBPhotoBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YXBPhotoBrowser-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* YXBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXBAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* YXBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXBAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* YXBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXBViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* YXBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXBViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* YXBPhotoBrowser_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXBPhotoBrowser_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -55,8 +62,23 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		7C1358E67708C9E9ABFB1A9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CBD3F80BF96FC39ACAC0B071 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B090B8A1DC5A877F32F7FCD0 /* Pods_YXBPhotoBrowser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXBPhotoBrowser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24B184CF1EF329A64EBE7C6 /* Pods_YXBPhotoBrowser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXBPhotoBrowser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB5B5121DAF17F200EE2C52 /* HZImagesGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZImagesGroupView.h; sourceTree = "<group>"; };
+		BBB5B5131DAF17F200EE2C52 /* HZImagesGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZImagesGroupView.m; sourceTree = "<group>"; };
+		BBB5B5141DAF17F200EE2C52 /* HZPhotoItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoItemModel.h; sourceTree = "<group>"; };
+		BBB5B5151DAF17F200EE2C52 /* HZPhotoItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoItemModel.m; sourceTree = "<group>"; };
+		BBB5B5181DAF182500EE2C52 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		BBB5B5191DAF182500EE2C52 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		BBB5B51A1DAF182500EE2C52 /* personInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personInfo.h; sourceTree = "<group>"; };
+		BBB5B51B1DAF182500EE2C52 /* personInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personInfo.m; sourceTree = "<group>"; };
+		BBB5B51C1DAF182500EE2C52 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BBB5B51D1DAF182500EE2C52 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BBB5B5211DAF196600EE2C52 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BBB5B5241DAF1A3A00EE2C52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C79AE0A7C1A4C92E6147B643 /* Pods-YXBPhotoBrowser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBPhotoBrowser_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXBPhotoBrowser_Example/Pods-YXBPhotoBrowser_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CBD3F80BF96FC39ACAC0B071 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D362ABA5274E36173F2E4603 /* Pods-YXBPhotoBrowser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBPhotoBrowser_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXBPhotoBrowser_Tests/Pods-YXBPhotoBrowser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +89,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				E6606AF580CA96FB6F98BFEA /* Pods_YXBPhotoBrowser_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +100,24 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				7B757E51F01776B86B84AB56 /* Pods_YXBPhotoBrowser_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B494C80308EE5D14A1A151B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A3BC78675870D2EBF443ED3 /* Pods-YXBPhotoBrowser_Example.debug.xcconfig */,
+				C79AE0A7C1A4C92E6147B643 /* Pods-YXBPhotoBrowser_Example.release.xcconfig */,
+				D362ABA5274E36173F2E4603 /* Pods-YXBPhotoBrowser_Tests.debug.xcconfig */,
+				16471AF23832465399BF8182 /* Pods-YXBPhotoBrowser_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +126,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
+				1B494C80308EE5D14A1A151B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +146,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
+				B090B8A1DC5A877F32F7FCD0 /* Pods_YXBPhotoBrowser_Example.framework */,
+				B24B184CF1EF329A64EBE7C6 /* Pods_YXBPhotoBrowser_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,11 +155,9 @@
 		6003F593195388D20070C39A /* Example for YXBPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				BBB5B5231DAF1A0100EE2C52 /* Copy From HZPhotoBrowser */,
 				6003F59C195388D20070C39A /* YXBAppDelegate.h */,
 				6003F59D195388D20070C39A /* YXBAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* YXBViewController.h */,
-				6003F5A6195388D20070C39A /* YXBViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -136,6 +172,7 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* YXBPhotoBrowser-Prefix.pch */,
+				BBB5B5241DAF1A3A00EE2C52 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,6 +206,24 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		BBB5B5231DAF1A0100EE2C52 /* Copy From HZPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				BBB5B5121DAF17F200EE2C52 /* HZImagesGroupView.h */,
+				BBB5B5131DAF17F200EE2C52 /* HZImagesGroupView.m */,
+				BBB5B5181DAF182500EE2C52 /* CustomCell.h */,
+				BBB5B5191DAF182500EE2C52 /* CustomCell.m */,
+				BBB5B51A1DAF182500EE2C52 /* personInfo.h */,
+				BBB5B51B1DAF182500EE2C52 /* personInfo.m */,
+				BBB5B5211DAF196600EE2C52 /* Main.storyboard */,
+				BBB5B51C1DAF182500EE2C52 /* ViewController.h */,
+				BBB5B51D1DAF182500EE2C52 /* ViewController.m */,
+				BBB5B5141DAF17F200EE2C52 /* HZPhotoItemModel.h */,
+				BBB5B5151DAF17F200EE2C52 /* HZPhotoItemModel.m */,
+			);
+			name = "Copy From HZPhotoBrowser";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "YXBPhotoBrowser_Example" */;
 			buildPhases = (
+				8B990863AEB12C859825C989 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				9E742F24C63938D17733DF1C /* [CP] Embed Pods Frameworks */,
+				56E67669D29B44491634C37E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "YXBPhotoBrowser_Tests" */;
 			buildPhases = (
+				5C6A1B893FDE1DCE3CE2F2E5 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
+				2656E7955B034994A2FCE76D /* [CP] Embed Pods Frameworks */,
+				96FD3092C6333CD17FB0E583 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,7 +283,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "PROJECT" */;
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "YXBPhotoBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,8 +307,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				BBB5B5221DAF196600EE2C52 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				BBB5B5251DAF1A3A00EE2C52 /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,13 +324,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2656E7955B034994A2FCE76D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXBPhotoBrowser_Tests/Pods-YXBPhotoBrowser_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56E67669D29B44491634C37E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXBPhotoBrowser_Example/Pods-YXBPhotoBrowser_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6A1B893FDE1DCE3CE2F2E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B990863AEB12C859825C989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96FD3092C6333CD17FB0E583 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXBPhotoBrowser_Tests/Pods-YXBPhotoBrowser_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E742F24C63938D17733DF1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXBPhotoBrowser_Example/Pods-YXBPhotoBrowser_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* YXBAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* YXBViewController.m in Sources */,
+				BBB5B51F1DAF182500EE2C52 /* personInfo.m in Sources */,
+				BBB5B5201DAF182500EE2C52 /* ViewController.m in Sources */,
+				BBB5B51E1DAF182500EE2C52 /* CustomCell.m in Sources */,
+				BBB5B5171DAF17F200EE2C52 /* HZPhotoItemModel.m in Sources */,
+				BBB5B5161DAF17F200EE2C52 /* HZImagesGroupView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,9 +545,9 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A3BC78675870D2EBF443ED3 /* Pods-YXBPhotoBrowser_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YXBPhotoBrowser/YXBPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "YXBPhotoBrowser/YXBPhotoBrowser-Info.plist";
@@ -401,9 +560,9 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79AE0A7C1A4C92E6147B643 /* Pods-YXBPhotoBrowser_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YXBPhotoBrowser/YXBPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "YXBPhotoBrowser/YXBPhotoBrowser-Info.plist";
@@ -416,6 +575,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D362ABA5274E36173F2E4603 /* Pods-YXBPhotoBrowser_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -439,6 +599,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16471AF23832465399BF8182 /* Pods-YXBPhotoBrowser_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -459,7 +620,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "PROJECT" */ = {
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "YXBPhotoBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5BD195388D20070C39A /* Debug */,

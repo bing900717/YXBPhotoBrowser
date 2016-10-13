@@ -1,0 +1,21 @@
+PODS:
+  - YXBPhotoBrowser (0.0.1):
+    - YYKit (~> 1.0.9)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - YXBPhotoBrowser (from `../`)
+
+EXTERNAL SOURCES:
+  YXBPhotoBrowser:
+    :path: ../
+
+SPEC CHECKSUMS:
+  YXBPhotoBrowser: 916d34ac00790434703c148ab3fb60e3eb5f029a
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 99b42f2a40c06c3cf2db4be07d308383ac1eb011
+
+COCOAPODS: 1.1.0.rc.3

@@ -10,9 +10,6 @@
 #import "YXBPhotoBrowserItemCell.h"
 #import "YXBIndicatorView.h"
 #import "YXBPhotoBrowserConfig.h"
-#import "AppDelegate.h"
-
-
 
 @interface YXBPhotoBrowserItemCell()<UIScrollViewDelegate>
 @property (nonatomic, strong) YYAnimatedImageView *imageView;
