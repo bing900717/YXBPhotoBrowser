@@ -41,7 +41,7 @@
 {
     self.placeholder = placeholder;
     
-    if (!self.indicatorView.superview) {
+    if (!self.indicatorView.superview && url) {
         [self.contentView addSubview:self.indicatorView];
     }
     
@@ -59,6 +59,9 @@
 
 - (void)updateUIWithImage:(UIImage *)image
 {
+    if (!image) {
+        return;
+    }
     
     CGSize imageSize = image.size;
     CGFloat imageWidth = imageSize.width;
