@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/bing900717/YXBPhotoBrowser.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'YXBPhotoBrowser/*'  
+  s.source_files = 'YXBPhotoBrowser/*.{h,m}'  
   s.dependency 'YYKit', '~> 1.0.9'
   s.requires_arc = true
   
