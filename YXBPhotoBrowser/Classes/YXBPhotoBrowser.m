@@ -61,6 +61,11 @@
 - (void)dimissWithIndex:(NSInteger)index imageView:(UIImageView *)imageView
 {
     UIView *sourceView = [self.delegate photoBrowser:self containerViewForIndex:index];
+    if (!sourceView) {
+        [self removeFromSuperview];
+        return;
+    }
+    
     CGRect targetFrame = [sourceView.superview convertRect:sourceView.frame toView:imageView.superview];
     self.indexLabel.hidden = YES;
     [UIView animateWithDuration:0.5f animations:^{

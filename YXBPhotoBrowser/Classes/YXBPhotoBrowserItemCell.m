@@ -48,7 +48,8 @@
      @weakify(self);
     [self.imageView setImageWithURL:url placeholder:placeholder options:YYWebImageOptionProgressive progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         @strongify(self);
-        self.indicatorView.progress = (CGFloat)(receivedSize/expectedSize);
+        CGFloat rate = receivedSize/(CGFloat)expectedSize;
+        self.indicatorView.progress = rate;
     } transform:nil completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
         @strongify(self);
         [self updateUIWithImage:image];
@@ -75,7 +76,9 @@
        targetY = (ScreenHeight - targetHeight)/2;
     }
     
-    self.imageView.frame = CGRectMake(0, targetY, ScreenWidth, targetHeight);
+    CGRect frame = CGRectMake(0, targetY, ScreenWidth, targetHeight);
+    
+    self.imageView.frame = frame;
     self.scrollView.contentSize = CGSizeMake(ScreenWidth, targetHeight);
 }
 
@@ -86,10 +89,13 @@
         return;
     }
     
+    UIImage *image = self.placeholder;
+    if (!image) {
+        return;
+    }
+    
     CGRect sourceFrame = [self.sourceImageContainer.superview convertRect:self.sourceImageContainer.frame toView:self.scrollView];
     self.imageView.frame = sourceFrame;
-    
-    UIImage *image = self.placeholder;
     CGSize imageSize = image.size;
     CGFloat imageWidth = imageSize.width;
     CGFloat imageHeight = imageSize.height;

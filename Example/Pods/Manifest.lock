@@ -1,21 +1,24 @@
 PODS:
-  - YXBPhotoBrowser (0.0.1):
+  - Reveal-SDK (4)
+  - YXBPhotoBrowser (0.0.2):
     - YYKit (~> 1.0.9)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - Reveal-SDK (~> 4)
   - YXBPhotoBrowser (from `../`)
 
 EXTERNAL SOURCES:
   YXBPhotoBrowser:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  YXBPhotoBrowser: 916d34ac00790434703c148ab3fb60e3eb5f029a
+  Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
+  YXBPhotoBrowser: cd461cf2a29387bb2b710ce0047259eac8085532
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 99b42f2a40c06c3cf2db4be07d308383ac1eb011
+PODFILE CHECKSUM: 61df429fdf9a6b1ceabf83995bc4156a1ee6a605
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.2.0
