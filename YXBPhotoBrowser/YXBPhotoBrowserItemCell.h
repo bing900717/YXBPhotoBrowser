@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) UIView *sourceImageContainer;
 
-@property (nonatomic, strong) void (^singleTapBlock)(UITapGestureRecognizer *recognizer);
+@property (nonatomic, strong) void (^singleTapBlock)(UITapGestureRecognizer *recognizer,UIImageView *imgView);
 
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder;
 

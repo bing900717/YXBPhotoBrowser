@@ -94,9 +94,9 @@
     cell.sourceImageContainer = sourceView;
     [cell setImageWithURL:url placeholderImage:placeholder];
     @weakify(self);
-    cell.singleTapBlock = ^(UITapGestureRecognizer *tap){
+    cell.singleTapBlock = ^(UITapGestureRecognizer *tap,UIImageView *imgView){
         @strongify(self);
-        [self dimissWithIndex:indexPath.item imageView:(UIImageView *)tap.view];
+        [self dimissWithIndex:indexPath.item imageView:imgView];
     };
     return cell;
 }

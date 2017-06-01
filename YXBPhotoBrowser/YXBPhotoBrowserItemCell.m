@@ -46,7 +46,7 @@
     }
     
      @weakify(self);
-    [self.imageView setImageWithURL:url placeholder:placeholder options:YYWebImageOptionProgressive progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.imageView setImageWithURL:url placeholder:placeholder options:YYWebImageOptionSetImageWithFadeAnimation progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         @strongify(self);
         CGFloat rate = receivedSize/(CGFloat)expectedSize;
         self.indicatorView.progress = rate;
@@ -147,8 +147,9 @@
 #pragma mark 单击
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {
+    self.indicatorView.hidden = YES;
     if (self.singleTapBlock) {
-        self.singleTapBlock(recognizer);
+        self.singleTapBlock(recognizer,self.imageView);
     }
 }
 
@@ -182,6 +183,7 @@
         [_scrollView addSubview:self.imageView];
         _scrollView.maximumZoomScale = 2.0;
         _scrollView.delegate = self;
+        [_scrollView addGestureRecognizer:self.singleTap];
     }
     return _scrollView;
 }
@@ -193,7 +195,6 @@
         _imageView = [YYAnimatedImageView new];
         _imageView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
         _imageView.userInteractionEnabled = YES;
-        [_imageView addGestureRecognizer:self.singleTap];
         [_imageView addGestureRecognizer:self.doubleTap];
     }
     return _imageView;
