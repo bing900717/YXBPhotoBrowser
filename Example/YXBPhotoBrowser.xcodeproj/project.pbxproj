@@ -513,6 +513,7 @@
 			baseConfigurationReference = 5A3BC78675870D2EBF443ED3 /* Pods-YXBPhotoBrowser_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YXBPhotoBrowser/YXBPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "YXBPhotoBrowser/YXBPhotoBrowser-Info.plist";
@@ -529,6 +530,7 @@
 			baseConfigurationReference = C79AE0A7C1A4C92E6147B643 /* Pods-YXBPhotoBrowser_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YXBPhotoBrowser/YXBPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "YXBPhotoBrowser/YXBPhotoBrowser-Info.plist";
