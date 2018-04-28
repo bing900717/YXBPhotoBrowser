@@ -10,6 +10,7 @@
 #import "YXBPhotoBrowserItemCell.h"
 #import "YXBIndicatorView.h"
 #import "YXBPhotoBrowserConfig.h"
+#import "UIAlertController+YXBShow.h"
 
 @interface YXBPhotoBrowserItemCell()<UIScrollViewDelegate>
 @property (nonatomic, strong) YYAnimatedImageView *imageView;
@@ -17,6 +18,7 @@
 
 @property (nonatomic,strong) UITapGestureRecognizer *doubleTap;
 @property (nonatomic,strong) UITapGestureRecognizer *singleTap;
+@property (nonatomic,strong) UILongPressGestureRecognizer *longPress;
 @property (nonatomic, assign) BOOL hasLoadedImage;//图片下载成功为YES 否则为NO
 @property (nonatomic, strong) UIImage *placeholder;
 @property (nonatomic, assign) BOOL hasDoneAnimation;
@@ -152,6 +154,33 @@
         self.singleTapBlock(recognizer,self.imageView);
     }
 }
+#pragma mark 长按
+- (void)handleLongPress:(UILongPressGestureRecognizer *)recognizer
+{
+    if (!self.window) {
+        return;
+    }
+    
+    UIImage *image = self.imageView.image;
+    if (!image) {
+        return;
+    }
+    
+    if (recognizer.state != UIGestureRecognizerStateBegan) {
+        return;
+    }
+    
+    UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil message:@"保存图片到相册" preferredStyle:UIAlertControllerStyleActionSheet] ;
+    UIAlertAction *save = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [sheet addAction:save];
+    [sheet addAction:cancel];
+    [sheet show];
+}
 
 #pragma mark UIScrollViewDelegate
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -184,6 +213,7 @@
         _scrollView.maximumZoomScale = 2.0;
         _scrollView.delegate = self;
         [_scrollView addGestureRecognizer:self.singleTap];
+ 
     }
     return _scrollView;
 }
@@ -196,6 +226,7 @@
         _imageView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
         _imageView.userInteractionEnabled = YES;
         [_imageView addGestureRecognizer:self.doubleTap];
+        [_imageView addGestureRecognizer:self.longPress];
     }
     return _imageView;
 }
@@ -222,6 +253,16 @@
     }
     return _singleTap;
 }
+
+- (UILongPressGestureRecognizer *)longPress
+{
+    if (!_longPress) {
+        _longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+        _longPress.minimumPressDuration = 0.8;
+    }
+    return _longPress;
+}
+
 
 - (YXBIndicatorView *)indicatorView
 {
