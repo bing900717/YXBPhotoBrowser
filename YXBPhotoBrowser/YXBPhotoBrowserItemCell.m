@@ -11,6 +11,8 @@
 #import "YXBIndicatorView.h"
 #import "YXBPhotoBrowserConfig.h"
 #import "UIAlertController+YXBShow.h"
+#import "MBProgressHUD.h"
+#import <Photos/PHPhotoLibrary.h>
 
 @interface YXBPhotoBrowserItemCell()<UIScrollViewDelegate>
 @property (nonatomic, strong) YYAnimatedImageView *imageView;
@@ -35,6 +37,21 @@
 {
     if (self = [super initWithFrame:frame]) {
         [self.contentView addSubview:self.scrollView];
+        
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSLog(@"%@", bundle);
+        UIImage *image = [UIImage imageNamed:@"yxb_save_button"
+                                    inBundle:bundle
+               compatibleWithTraitCollection:nil];
+        
+        UIButton *button = [UIButton new];
+        [button addTarget:self action:@selector(saveImageToAlbum) forControlEvents:UIControlEventTouchUpInside];
+        button.translatesAutoresizingMaskIntoConstraints = NO;
+        [button setImage:image forState:UIControlStateNormal];
+        [self.contentView addSubview:button];
+        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-30];
+        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-20];
+        [self.contentView addConstraints:@[right,bottom]];
     }
     return self;
 }
@@ -158,11 +175,7 @@
 - (void)handleLongPress:(UILongPressGestureRecognizer *)recognizer
 {
     if (!self.window) {
-        return;
-    }
-    
-    UIImage *image = self.imageView.image;
-    if (!image) {
+        [self makeToastWithText:@"保存失败"];
         return;
     }
     
@@ -171,8 +184,9 @@
     }
     
     UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil message:@"保存图片到相册" preferredStyle:UIAlertControllerStyleActionSheet] ;
+    __weak typeof(self) weakSelf = self;
     UIAlertAction *save = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        [weakSelf saveImageToAlbum];
     }];
     
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -181,6 +195,48 @@
     [sheet addAction:cancel];
     [sheet show];
 }
+
+
+- (void)saveImageToAlbum
+{
+    UIImage *image = self.imageView.image;
+    if (!image) {
+        [self makeToastWithText:@"保存失败，图片为空"];
+        return;
+    }
+    
+    BOOL hasAuthorized = [PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized;
+    if (!hasAuthorized) {
+        [self makeToastWithText:@"保存失败，没有相册写入权限，请打开相册访问权限"];
+        return;
+    }
+    
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+
+}
+
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (!error) {
+        [self makeToastWithText:@"保存成功"];
+        return;
+    } else {
+        [self makeToastWithText:@"保存失败,请重试"];
+        return;
+    }
+}
+
+
+- (void)makeToastWithText:(NSString *)text
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = text;
+    hud.label.numberOfLines = 0;
+    [hud hideAnimated:YES afterDelay:1.0];
+}
+
 
 #pragma mark UIScrollViewDelegate
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView

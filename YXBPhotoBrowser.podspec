@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXBPhotoBrowser'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'A simple photobrowser.'
   s.description      = <<-DESC 
   仿微信大图浏览，参考了很多HZPhotoBrowser的实现，但是更易于使用。
@@ -14,7 +14,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.source_files = 'YXBPhotoBrowser/**/*.{h,m}'  
+  s.resource = ['YXBPhotoBrowser/*.xcassets']
   s.dependency 'YYKit', '~> 1.0.9'
+  s.dependency 'MBProgressHUD'
   s.requires_arc = true
   
 end
